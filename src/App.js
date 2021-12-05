@@ -3,14 +3,13 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import Dashboard from "./pages/dashboard/Dashboard";
 
-
 const queryClient = new QueryClient();
-
+// npm run deploy
 export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
-          <Dashboard />
+        <Dashboard />
       </Router>
     </QueryClientProvider>
   );
