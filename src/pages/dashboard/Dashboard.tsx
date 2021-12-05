@@ -21,7 +21,7 @@ export default function Dashboard() {
       <div>Wbnb Price: {!iswbnbPriceLoading && wbnbPrice}$</div>
       <div>THC Price: {!isTHCPriceLoading && THCPrice}$</div>
       <button onClick={() => setIsRefetchInterval(!isRefetchInterval)}>
-        {isRefetchInterval ? "||" : "|>"}
+        {isRefetchInterval ? "⏸" : "▶"}
       </button>
       <br></br>
       <div>
