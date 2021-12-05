@@ -39,7 +39,7 @@ export const useDashboard = () => {
   const [wbnbPrice, setwbnbPrice] = useState<number>(0);
   const [THCPrice, setTHCPrice] = useState<number>(0);
   const [isRefetchInterval, setIsRefetchInterval] = useState<boolean>(false);
-
+  document.title = "dfsdfsdfsd";
   const { data: heroes, isLoading } = useQuery(
     "heros",
     () =>
