@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/thetan-sniper/static/css/main.2ae47eeb.chunk.css",
-    "main.js": "/thetan-sniper/static/js/main.9e5b0018.chunk.js",
-    "main.js.map": "/thetan-sniper/static/js/main.9e5b0018.chunk.js.map",
+    "main.js": "/thetan-sniper/static/js/main.6d587906.chunk.js",
+    "main.js.map": "/thetan-sniper/static/js/main.6d587906.chunk.js.map",
     "runtime-main.js": "/thetan-sniper/static/js/runtime-main.a593ae8b.js",
     "runtime-main.js.map": "/thetan-sniper/static/js/runtime-main.a593ae8b.js.map",
     "static/css/2.bd932d36.chunk.css": "/thetan-sniper/static/css/2.bd932d36.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.bd932d36.chunk.css",
     "static/js/2.db9934d2.chunk.js",
     "static/css/main.2ae47eeb.chunk.css",
-    "static/js/main.9e5b0018.chunk.js"
+    "static/js/main.6d587906.chunk.js"
   ]
 }
