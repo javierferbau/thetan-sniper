@@ -96,6 +96,10 @@ export const useDashboard = () => {
     if (needAlarm && heroes && heroes.some((x: any) => x.needAlarm)) {
       alarm.play();
     }
+
+    if (!needAlarm) {
+      alarm.pause();
+    }
   }, [heroes, alarm, needAlarm]);
 
   return [
