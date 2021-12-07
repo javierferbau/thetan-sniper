@@ -27,7 +27,11 @@ export default function Table({ columns, data }: { columns: any; data: any }) {
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
-                <th data-tip={column.Footer} {...column.getHeaderProps()}>
+                <th
+                  data-tip={column.Footer}
+                  {...column.getHeaderProps()}
+                  // {...column.getHeaderProps(column.getSortByToggleProps())}
+                >
                   {column.render("Header")}
                 </th>
               ))}

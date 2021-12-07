@@ -29,6 +29,7 @@ export function mapHerosCalc(
           (heroRarityWinByWinDiccionary[hero.heroRarity] + 6) *
           THCPrice -
         (hero.price / 100000000) * wbnbPrice,
+      needAlarm: (hero.price / 100000000) * wbnbPrice < 61,
     };
   });
 }

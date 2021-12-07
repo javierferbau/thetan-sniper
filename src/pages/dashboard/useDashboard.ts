@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { fetchDatas } from "../../api/fetch";
+import { mapHerosCalc } from "./utils";
 
 const columns = [
   {
@@ -39,8 +40,15 @@ export const useDashboard = () => {
   const [wbnbPrice, setwbnbPrice] = useState<number>(0);
   const [THCPrice, setTHCPrice] = useState<number>(0);
   const [isRefetchInterval, setIsRefetchInterval] = useState<boolean>(false);
-  document.title = "dfsdfsdfsd";
-  const { data: heroes, isLoading } = useQuery(
+  const [heroes, setHeroes] = useState<any>();
+  const [herosPriceAlarm, setPriceAlarm] = useState<number>(61);
+  const [needAlarm, setNeedAlarm] = useState<boolean>(true);
+  const [alarm] = useState(
+    new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3")
+  );
+
+  document.title = "Thetan-sniper";
+  const { data, isLoading } = useQuery(
     "heros",
     () =>
       fetchDatas(
@@ -77,6 +85,19 @@ export const useDashboard = () => {
     }
   );
 
+  useEffect(() => {
+    if (data && data.data && wbnbPrice && THCPrice) {
+      const heroes = mapHerosCalc(data.data, wbnbPrice, THCPrice);
+      setHeroes(heroes);
+    }
+  }, [data, wbnbPrice, THCPrice]);
+
+  useEffect(() => {
+    if (needAlarm && heroes && heroes.some((x: any) => x.needAlarm)) {
+      alarm.play();
+    }
+  }, [heroes, alarm, needAlarm]);
+
   return [
     wbnbPrice,
     heroes,
@@ -87,5 +108,9 @@ export const useDashboard = () => {
     columns,
     isRefetchInterval,
     setIsRefetchInterval,
+    herosPriceAlarm,
+    setPriceAlarm,
+    needAlarm,
+    setNeedAlarm,
   ];
 };
