@@ -13,10 +13,18 @@ export function mapHerosCalc(
   heroRarityDiccionary[1] = "Epic";
   heroRarityDiccionary[2] = "Legendary";
 
+  const calcWinDiff = (hero: any) =>
+    hero.battleCap *
+      (heroRarityWinByWinDiccionary[hero.heroRarity] + 6) *
+      THCPrice -
+    (hero.price / 100000000) * wbnbPrice;
+
+  const calcUsdPrice = (hero: any) => (hero.price / 100000000) * wbnbPrice;
+
   return heros.map((hero) => {
     return {
       ...hero,
-      usdPrice: (hero.price / 100000000) * wbnbPrice,
+      usdPrice: calcUsdPrice(hero),
       heroRarityString: `${heroRarityDiccionary[hero.heroRarity]} (${
         heroRarityWinByWinDiccionary[hero.heroRarity]
       } gTHC).`,
@@ -24,11 +32,12 @@ export function mapHerosCalc(
         hero.battleCap *
         (heroRarityWinByWinDiccionary[hero.heroRarity] + 6) *
         THCPrice,
-      winDiffCalc:
-        hero.battleCap *
-          (heroRarityWinByWinDiccionary[hero.heroRarity] + 6) *
-          THCPrice -
-        (hero.price / 100000000) * wbnbPrice,
+      winDiffCalc: calcWinDiff(hero),
+      winBenefitTantPerCent: `${Math.trunc(
+        ((Math.trunc(calcWinDiff(hero)) - Math.trunc(calcUsdPrice(hero))) /
+          Math.trunc(calcWinDiff(hero))) *
+          100
+      )}%.`,
       needAlarm: (hero.price / 100000000) * wbnbPrice < 61,
     };
   });

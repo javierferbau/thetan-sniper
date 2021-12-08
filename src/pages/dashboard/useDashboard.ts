@@ -34,6 +34,11 @@ const columns = [
     accessor: "winDiffCalc",
     Footer: "Hero cost - Maximum $ by Win",
   },
+  {
+    Header: "Benefits %",
+    accessor: "winBenefitTantPerCent",
+    Footer: "100*(P-C)/P",
+  },
 ];
 
 export const useDashboard = () => {
