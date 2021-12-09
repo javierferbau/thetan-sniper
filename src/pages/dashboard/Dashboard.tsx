@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Table from "../components/Table";
 import { useDashboard } from "./useDashboard";
-import { mapHerosCalc } from "./utils";
 
 export default function Dashboard() {
   const [
