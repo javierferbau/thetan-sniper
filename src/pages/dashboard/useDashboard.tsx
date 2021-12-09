@@ -20,7 +20,6 @@ export const useDashboard = () => {
       Header: "Silence alarm",
       accessor: "silenceAlarm",
       Cell: (props: any) => {
-        // console.log(props);
         return (
           <button onClick={() => silenceHero(props.row.original.id)}>
             {!props.row.original.silenceAlarm ? "🔊" : "🔈"}

@@ -41,7 +41,17 @@ export default function Dashboard() {
       </button>
       <br></br>
       <div>
-        {!isLoading && heroes && <Table columns={columns} data={heroes} />}
+        {!isLoading && heroes && (
+          <Table
+            columns={columns}
+            data={heroes}
+            onClickRow={(row: any) =>
+              window.open(
+                `https://marketplace.thetanarena.com/item/${row.original.refId}`
+              )
+            }
+          />
+        )}
       </div>
     </>
   );

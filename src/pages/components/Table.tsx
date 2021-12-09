@@ -7,7 +7,15 @@ import BTable from "react-bootstrap/Table";
 import { useSortBy, useTable } from "react-table";
 import ReactTooltip from "react-tooltip";
 
-export default function Table({ columns, data }: { columns: any; data: any }) {
+export default function Table({
+  columns,
+  data,
+  onClickRow,
+}: {
+  columns: any;
+  data: any;
+  onClickRow: (row: any) => any;
+}) {
   // Use the state and functions returned from useTable to build your UI
   const { getTableProps, headerGroups, rows, prepareRow } = useTable(
     {
@@ -42,7 +50,7 @@ export default function Table({ columns, data }: { columns: any; data: any }) {
           {rows.map((row, i) => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()}>
+              <tr onClick={() => onClickRow(row)} {...row.getRowProps()}>
                 {row.cells.map((cell) => {
                   return (
                     <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
