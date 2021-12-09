@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/thetan-sniper/static/css/main.2ae47eeb.chunk.css",
-    "main.js": "/thetan-sniper/static/js/main.6d587906.chunk.js",
-    "main.js.map": "/thetan-sniper/static/js/main.6d587906.chunk.js.map",
+    "main.js": "/thetan-sniper/static/js/main.6287dde0.chunk.js",
+    "main.js.map": "/thetan-sniper/static/js/main.6287dde0.chunk.js.map",
     "runtime-main.js": "/thetan-sniper/static/js/runtime-main.a593ae8b.js",
     "runtime-main.js.map": "/thetan-sniper/static/js/runtime-main.a593ae8b.js.map",
     "static/css/2.bd932d36.chunk.css": "/thetan-sniper/static/css/2.bd932d36.chunk.css",
-    "static/js/2.db9934d2.chunk.js": "/thetan-sniper/static/js/2.db9934d2.chunk.js",
-    "static/js/2.db9934d2.chunk.js.map": "/thetan-sniper/static/js/2.db9934d2.chunk.js.map",
+    "static/js/2.0596cee2.chunk.js": "/thetan-sniper/static/js/2.0596cee2.chunk.js",
+    "static/js/2.0596cee2.chunk.js.map": "/thetan-sniper/static/js/2.0596cee2.chunk.js.map",
     "static/js/3.a489fb86.chunk.js": "/thetan-sniper/static/js/3.a489fb86.chunk.js",
     "static/js/3.a489fb86.chunk.js.map": "/thetan-sniper/static/js/3.a489fb86.chunk.js.map",
     "index.html": "/thetan-sniper/index.html",
     "static/css/2.bd932d36.chunk.css.map": "/thetan-sniper/static/css/2.bd932d36.chunk.css.map",
     "static/css/main.2ae47eeb.chunk.css.map": "/thetan-sniper/static/css/main.2ae47eeb.chunk.css.map",
-    "static/js/2.db9934d2.chunk.js.LICENSE.txt": "/thetan-sniper/static/js/2.db9934d2.chunk.js.LICENSE.txt"
+    "static/js/2.0596cee2.chunk.js.LICENSE.txt": "/thetan-sniper/static/js/2.0596cee2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a593ae8b.js",
     "static/css/2.bd932d36.chunk.css",
-    "static/js/2.db9934d2.chunk.js",
+    "static/js/2.0596cee2.chunk.js",
     "static/css/main.2ae47eeb.chunk.css",
-    "static/js/main.6d587906.chunk.js"
+    "static/js/main.6287dde0.chunk.js"
   ]
 }
